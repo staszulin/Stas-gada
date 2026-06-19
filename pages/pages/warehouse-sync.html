@@ -9,14 +9,31 @@
 </head>
 <body class="bg-[#f7f9fb] min-h-screen pb-20">
 <header class="fixed top-0 w-full bg-white border-b p-4">
-  <h1 class="text-xl font-bold">סנכרון מחסן</h1>
+  <h1 class="text-xl font-bold text-primary">סנכרון מחסן</h1>
 </header>
 
-<main class="pt-20 px-4 max-w-xl mx-auto">
-  <div class="bg-white rounded-2xl p-6 shadow-sm">
-    <p class="text-lg font-medium">הזמנות ממתינות לסנכרון</p>
-    <!-- כאן יהיה תוכן מלא יותר בהמשך -->
+<main class="pt-20 px-4 max-w-xl mx-auto space-y-6">
+  <div class="bg-white rounded-2xl p-6">
+    <div class="flex justify-between mb-4">
+      <span class="font-bold">התקדמות סנכרון</span>
+      <span class="text-green-600">87%</span>
+    </div>
+    <div class="w-full bg-gray-200 h-3 rounded-full">
+      <div class="bg-primary h-3 rounded-full w-[87%]"></div>
+    </div>
   </div>
+
+  <div class="bg-white rounded-2xl p-6">
+    <h3 class="font-bold mb-3">הזמנות ממתינות</h3>
+    <div class="space-y-3">
+      <div class="flex justify-between p-3 bg-gray-50 rounded-xl">
+        <div>#ORD-7742</div>
+        <div class="text-orange-600">בטיפול</div>
+      </div>
+    </div>
+  </div>
+
+  <button onclick="alert('סנכרון התחיל!')" class="w-full bg-primary text-white py-4 rounded-2xl font-bold">התחל סנכרון חדש</button>
 </main>
 </body>
 </html>
