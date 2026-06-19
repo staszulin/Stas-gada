@@ -3,48 +3,37 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
-<title>מערכת גדא י.קרן בע"מ - דיווח סוכן</title>
+<title>דיווח סוכן - גדא</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: { extend: { colors: { primary: "#00288e", primary-container: "#1e40af", on-primary: "#ffffff" } } }
-        }
-</script>
-<style>
-        body { background-color: #f7f9fb; font-family: 'Hanken Grotesk', sans-serif; }
-        .clean-card { background: #ffffff; border: 1px solid rgba(196,197,213,0.3); border-radius: 0.5rem; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 </head>
-<body class="min-h-screen flex flex-col pb-24 bg-surface">
-<header class="fixed top-0 w-full z-50 bg-white border-b p-4 flex justify-between items-center">
-  <div class="flex items-center gap-3">
-    <div class="text-xl font-bold text-primary">גדה קבוצת לוגיסטיקה</div>
-  </div>
+<body class="min-h-screen flex flex-col pb-24 bg-[#f7f9fb]">
+<header class="fixed top-0 w-full z-50 bg-white border-b p-4 flex justify-between">
+  <div class="font-bold text-primary">גדה קבוצת לוגיסטיקה</div>
 </header>
 
 <main class="max-w-xl mx-auto px-4 py-20 space-y-6">
   <h2 class="text-2xl font-bold">דיווח סוכן חדש</h2>
   
-  <div class="clean-card p-5">
-    <label class="block font-bold mb-2">בחירת סוכן</label>
-    <select class="w-full border rounded-lg p-3">
+  <div class="bg-white rounded-2xl p-6 shadow-sm">
+    <label class="font-bold block mb-2">סוכן</label>
+    <select class="w-full border rounded-xl p-4"> 
       <option>ליאור לסרי</option>
       <option>איציק עזרן</option>
+      <option>אריאל אדרי</option>
     </select>
   </div>
 
-  <div class="clean-card p-5">
-    <label class="block font-bold mb-2">רשת שיווק</label>
-    <div class="grid grid-cols-3 gap-2">
-      <button onclick="this.style.backgroundColor='#00288e';this.style.color='white'" class="border p-3 rounded-lg text-sm">מקס סטוק</button>
-      <button onclick="this.style.backgroundColor='#00288e';this.style.color='white'" class="border p-3 rounded-lg text-sm">ביג סטוק</button>
+  <div class="bg-white rounded-2xl p-6 shadow-sm">
+    <label class="font-bold block mb-2">רשת</label>
+    <div class="grid grid-cols-3 gap-3">
+      <button onclick="this.classList.add('bg-primary','text-white')" class="border rounded-xl py-3 text-sm">מקס סטוק</button>
+      <button onclick="this.classList.add('bg-primary','text-white')" class="border rounded-xl py-3 text-sm">ביג סטוק</button>
+      <button onclick="this.classList.add('bg-primary','text-white')" class="border rounded-xl py-3 text-sm">דן דיל</button>
     </div>
   </div>
 
-  <button class="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg">שדר בזמן אמת למחסן</button>
+  <button onclick="alert('שודר בהצלחה!')" class="w-full bg-[#00288e] text-white py-5 rounded-2xl font-bold text-lg">שדר בזמן אמת למחסן</button>
 </main>
 </body>
 </html>
