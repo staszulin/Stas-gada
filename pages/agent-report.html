@@ -97,36 +97,148 @@
     </style>
 </head>
 <body class="min-h-screen flex flex-col pb-24 md:pb-0 bg-surface">
-<header class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/30 flex justify-between items-center px-4 h-16 shadow-sm">
-  <div class="flex items-center gap-3">
-    <div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center p-1">
-      <img alt="Gada Group" class="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMR4hYW29gQ8-dfyosTcQc-BIfQmNf5vmTJtJchTLOxXisg4yH7KSbzsZO9sNz2ItWdY37TlXA1bBvjis-4MaGEjr7WZLG-wM36-WjDwLAhHpE7ZEU4kzrBhD3a_voaXOVtH9CzpzZfaYXoSgeH5s_2KsDLA1LP7_AOM5JcQx_O7FuWONj7RrblagPWpniFLIGvMFvE7HXmA_mgJKIGxnL_Uf4Z1SMfVGpVGI52uieljDOhjG4kxVuQ-lG1REyWjM5qK4"/>
-    </div>
-    <div class="flex flex-col">
-      <h1 class="text-body-lg font-bold text-primary leading-tight">גדה קבוצת לוגיסטיקה</h1>
-    </div>
-  </div>
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white border-b border-outline-variant/30 flex justify-between items-center px-container-padding h-16 shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center p-1">
+<img alt="Gada Group" class="w-full h-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMR4hYW29gQ8-dfyosTcQc-BIfQmNf5vmTJtJchTLOxXisg4yH7KSbzsZO9sNz2ItWdY37TlXA1bBvjis-4MaGEjr7WZLG-wM36-WjDwLAhHpE7ZEU4kzrBhD3a_voaXOVtH9CzpzZfaYXoSgeH5s_2KsDLA1LP7_AOM5JcQx_O7FuWONj7RrblagPWpniFLIGvMFvE7HXmA_mgJKIGxnL_Uf4Z1SMfVGpVGI52uieljDOhjG4kxVuQ-lG1REyWjM5qK4"/>
+</div>
+<div class="flex flex-col">
+<h1 class="text-body-lg font-bold text-primary leading-tight">גדה קבוצת לוגיסטיקה</h1>
+</div>
+</div>
 </header>
-
-<main class="max-w-xl mx-auto px-4 py-6 mt-16 flex-grow w-full space-y-6">
-  <div>
-    <h2 class="text-headline-sm text-on-surface mb-1">דיווח סוכן חדש</h2>
-  </div>
-  <form class="space-y-4" id="orderForm">
-    <!-- Agent Selection -->
-    <div class="clean-card p-5">
-      <div class="flex items-center gap-2 mb-4">
-        <span class="material-symbols-outlined text-primary text-xl">person</span>
-        <label class="text-body-lg font-bold text-on-surface">בחירת סוכן</label>
-      </div>
-      <select class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md">
-        <option disabled selected>בחר שם סוכן...</option>
-        <option>ליאור לסרי</option>
-        <option>איציק עזרן</option>
-      </select>
-    </div>
-    <!-- Add more sections as needed -->
-  </form>
+<!-- Main Content -->
+<main class="max-w-xl mx-auto px-container-padding py-6 mt-16 flex-grow w-full space-y-6">
+<div class="animate-fade-in">
+<h2 class="text-headline-sm text-on-surface mb-1">דיווח סוכן חדש</h2>
+<p class="text-body-md text-on-surface-variant">הזנת פרטי הזמנה ושליחה למרכז הלוגיסטי</p>
+</div>
+<form class="space-y-4" id="orderForm">
+<!-- Agent Selection -->
+<div class="clean-card p-5 animate-fade-in" style="animation-delay: 0.1s;">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">person</span>
+<label class="text-body-lg font-bold text-on-surface">בחירת סוכן</label>
+</div>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md focus:ring-1 focus:ring-primary focus:border-primary outline-none appearance-none cursor-pointer">
+<option disabled="" selected="" value="">בחר שם סוכן...</option>
+<option value="lior">ליאור לסרי</option>
+<option value="itzik">איציק עזרן</option>
+<option value="ariel">אריאל אדרי</option>
+</select>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Network Selection -->
+<div class="clean-card p-5 animate-fade-in" style="animation-delay: 0.2s;">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">storefront</span>
+<label class="text-body-lg font-bold text-on-surface">רשת שיווק</label>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+<button class="network-chip px-3 py-2.5 border border-outline-variant rounded-lg text-body-md bg-white hover:border-primary transition-all text-center font-medium" onclick="selectNetwork(this)" type="button">מקס סטוק</button>
+<button class="network-chip px-3 py-2.5 border border-outline-variant rounded-lg text-body-md bg-white hover:border-primary transition-all text-center font-medium" onclick="selectNetwork(this)" type="button">הסטוק</button>
+<button class="network-chip px-3 py-2.5 border border-outline-variant rounded-lg text-body-md bg-white hover:border-primary transition-all text-center font-medium" onclick="selectNetwork(this)" type="button">ביג סטוק</button>
+<button class="network-chip px-3 py-2.5 border border-outline-variant rounded-lg text-body-md bg-white hover:border-primary transition-all text-center font-medium" onclick="selectNetwork(this)" type="button">דן דיל</button>
+<button class="network-chip px-3 py-2.5 border border-outline-variant rounded-lg text-body-md bg-white hover:border-primary transition-all text-center font-medium" onclick="selectNetwork(this)" type="button">בום</button>
+<button class="network-chip px-3 py-2.5 border border-outline-variant rounded-lg text-body-md bg-white hover:border-primary transition-all text-center font-medium" onclick="selectNetwork(this)" type="button">קינג סטור</button>
+<button class="network-chip px-3 py-2.5 border border-outline-variant rounded-lg text-body-md bg-white hover:border-primary transition-all text-center font-medium" onclick="selectNetwork(this)" type="button">מיני מקס</button>
+<button class="network-chip px-3 py-2.5 border border-outline-variant rounded-lg text-body-md bg-white hover:border-primary transition-all text-center font-medium" onclick="selectNetwork(this)" type="button">סיטי מרקט</button>
+<button class="network-chip px-3 py-2.5 border border-outline-variant rounded-lg text-body-md bg-white hover:border-primary transition-all text-center font-medium" onclick="selectNetwork(this)" type="button">קרל ברג</button>
+<button class="network-chip px-3 py-2.5 border border-outline-variant rounded-lg text-body-md bg-white hover:border-primary transition-all text-center font-medium" onclick="selectNetwork(this)" type="button">זול סטוק</button>
+<button class="network-chip px-3 py-2.5 border border-outline-variant rounded-lg text-body-md bg-white hover:border-primary transition-all text-center font-medium italic" onclick="selectNetwork(this)" type="button">אחר</button>
+</div>
+</div>
+<!-- Branch Details -->
+<div class="clean-card p-5 animate-fade-in" style="animation-delay: 0.3s;">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+<label class="text-body-lg font-bold text-on-surface">פרטי סניף (בזמן אמת)</label>
+</div>
+<div class="space-y-4">
+<div class="space-y-1">
+<label class="text-label-md text-on-surface-variant font-bold pr-1">שם סניף</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md focus:ring-1 focus:ring-primary focus:border-primary outline-none" placeholder="הזן שם סניף..." type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-label-md text-on-surface-variant font-bold pr-1">כתובת מלאה</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-3 pl-10 text-body-md focus:ring-1 focus:ring-primary focus:border-primary outline-none" placeholder="רחוב, עיר, מספר" type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">map</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Notes -->
+<div class="clean-card p-5 animate-fade-in" style="animation-delay: 0.4s;">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">sticky_note_2</span>
+<label class="text-body-lg font-bold text-on-surface">הערות סוכן</label>
+</div>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md focus:ring-1 focus:ring-primary focus:border-primary outline-none resize-none h-24" placeholder="דגשים למחסן, שעות פריקה וכו'..."></textarea>
+</div>
+<!-- Preview Card -->
+<div class="bg-surface-container-low border border-outline-variant/50 rounded-lg p-4 animate-fade-in" style="animation-delay: 0.5s;">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">visibility</span>
+<span class="text-label-md font-bold text-on-surface-variant">תצוגה מקדימה</span>
+</div>
+<span class="text-[10px] text-primary bg-primary/5 px-2 py-0.5 rounded-full border border-primary/10">שידור מסונכרן</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white/60 p-2 rounded border border-outline-variant/20">
+<p class="text-[10px] text-on-surface-variant mb-0.5">רשת</p>
+<p class="text-body-md font-bold text-on-surface truncate" id="preview-network">טרם נבחר</p>
+</div>
+<div class="bg-white/60 p-2 rounded border border-outline-variant/20">
+<p class="text-[10px] text-on-surface-variant mb-0.5">סניף</p>
+<p class="text-body-md font-bold text-on-surface truncate" id="preview-branch">-</p>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-2">
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary py-4 rounded-lg font-bold text-body-lg flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all active:scale-[0.98] animate-fade-in" style="animation-delay: 0.6s;" type="submit">
+<span class="material-symbols-outlined">bolt</span>
+                    שדר בזמן אמת למחסן
+                </button>
+</div>
+</form>
 </main>
+<script>
+        function selectNetwork(button) {
+            document.querySelectorAll('.network-chip').forEach(chip => {
+                chip.classList.remove('active');
+            });
+            button.classList.add('active');
+            document.getElementById('preview-network').innerText = button.innerText;
+        }
+
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+            
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> שולח...';
+            btn.classList.add('pointer-events-none', 'opacity-90');
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> שודר בהצלחה';
+                btn.classList.replace('bg-primary', 'bg-green-600');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.replace('bg-green-600', 'bg-primary');
+                    btn.classList.remove('pointer-events-none', 'opacity-90');
+                    e.target.reset();
+                    document.querySelectorAll('.network-chip').forEach(chip => chip.classList.remove('active'));
+                    document.getElementById('preview-network').innerText = 'טרם נבחר';
+                }, 2000);
+            }, 1200);
+        });
+    </script>
 </body>
 </html>
