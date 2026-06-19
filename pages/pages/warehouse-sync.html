@@ -4,36 +4,37 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>סנכרון מחסן - גדא</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 </head>
-<body class="bg-[#f7f9fb] min-h-screen pb-20">
-<header class="fixed top-0 w-full bg-white border-b p-4">
-  <h1 class="text-xl font-bold text-primary">סנכרון מחסן</h1>
+<body class="min-h-screen flex flex-col bg-surface">
+<header class="fixed top-0 w-full z-50 bg-white border-b p-4 flex justify-between">
+  <h1 class="text-xl font-bold">סנכרון מחסן</h1>
 </header>
 
 <main class="pt-20 px-4 max-w-xl mx-auto space-y-6">
-  <div class="bg-white rounded-2xl p-6">
+  <div class="clean-card p-5">
     <div class="flex justify-between mb-4">
-      <span class="font-bold">התקדמות סנכרון</span>
-      <span class="text-green-600">87%</span>
+      <span class="font-bold">התקדמות</span>
+      <span class="text-green-600 font-bold">87%</span>
     </div>
     <div class="w-full bg-gray-200 h-3 rounded-full">
       <div class="bg-primary h-3 rounded-full w-[87%]"></div>
     </div>
   </div>
 
-  <div class="bg-white rounded-2xl p-6">
+  <div class="clean-card p-5">
     <h3 class="font-bold mb-3">הזמנות ממתינות</h3>
-    <div class="space-y-3">
-      <div class="flex justify-between p-3 bg-gray-50 rounded-xl">
-        <div>#ORD-7742</div>
-        <div class="text-orange-600">בטיפול</div>
+    <div class="space-y-4">
+      <div class="p-4 bg-white border rounded-xl">
+        <div class="flex justify-between">
+          <div>#ORD-7742</div>
+          <div class="text-orange-600">בטיפול</div>
+        </div>
       </div>
     </div>
   </div>
-
-  <button onclick="alert('סנכרון התחיל!')" class="w-full bg-primary text-white py-4 rounded-2xl font-bold">התחל סנכרון חדש</button>
 </main>
 </body>
 </html>
